@@ -1,8 +1,0 @@
-mixin b-intro(intro)
-	.container-fluid.border.mb-3
-		.row
-			.col.text-center.my-5
-				h1= intro.title
-				p= intro.text
-				each btn in intro.btns
-					a.btn.rounded-0.my-1.mx-3(href="#" class= btn.class)= btn.value	
