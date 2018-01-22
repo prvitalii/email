@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important; }
+  h2 {
+    font-size: 1.25rem !important; }
+  h3 {
+    font-size: 1.1875rem !important; } }
