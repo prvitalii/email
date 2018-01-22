@@ -1,0 +1,7 @@
+mixin b-tools(data)
+	.tools
+		.row
+			each item in data
+				.col-md-4
+					h3= item.title
+					p= item.text

@@ -1,0 +1,17 @@
+include ../globals/common
+include ../globals/data
+
+include ../blocks/all
+
+block params
+	- var pageTitle = "Yeti"
+   
+doctype html
+html
+	head
+		title= pageTitle
+		block meta
+		block styles
+	body
+		block main
+		block scripts

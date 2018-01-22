@@ -1,0 +1,6 @@
+mixin b-footer(items)
+	footer.footer
+		ul.nav.justify-content-start
+			each item in items
+				li.nav-item
+					a(href="#").nav-link.text-info= item

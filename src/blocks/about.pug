@@ -1,0 +1,8 @@
+mixin b-about(data)
+	.about
+		.row.pb-3
+			.col-md-6.order-2
+				img(src=data.img).img-fluid.img-thumbnail.rounded-0
+			.col-md-6.order-1
+				h1= data.title
+				p= data.text

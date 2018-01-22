@@ -1,0 +1,24 @@
+* 
+    margin: 0;
+    padding: 0;
+
+
+*,
+*::before,
+*::after
+    box-sizing: inherit;
+
+$phone: (max-width: 768px)
+
+$tablet: (min-width: 769px) and (max-width: 991)
+
+$desctop: (min-width: 992px)
+
+@media #{$phone}
+	h1
+		font-size: 1.5rem !important
+	h2
+		font-size: 1.25rem !important
+
+	h3
+		font-size: 1.1875rem !important

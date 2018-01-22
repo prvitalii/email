@@ -1,0 +1,8 @@
+mixin b-works()
+	.works
+		h1 Our recent work
+		.row
+			- for (var i=0; i<12; i++)
+				.col-sm-4.col-md-3
+					img(src='http://placehold.it/550x550').img-fluid.img-thumbnail.rounded-0.mb-3
+	hr
