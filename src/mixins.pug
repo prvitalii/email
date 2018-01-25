@@ -1,0 +1,53 @@
+mixin social(src, alt)
+	td
+		a(href="#" style="padding: 0 5px; text-decoration: underline; color: #d3d3d3; font: 15px Arial, sans-serif; line-height: 15px;" target="_blank")
+			img(src= src, alt= alt, border="0" width="25" height="25")
+
+mixin founder()
+	table(cellspacing="0", cellpadding="0", border="0" style="margin: 0 15px; padding: 30px 0 0 0; display: block;")
+		tbody
+			tr
+				td(style="")
+					img(src="https://i.imgur.com/CctBpGG.jpg" onerror="this.style.display='none'", alt="" border="0" width="50" style="display:block; margin: 0 15px 0 0;")
+				td(style="text-align: left; color: #000; font: 12px Arial, sans-serif; line-height: 15px; padding: 0 100px 0 0") Best regards, Andrew
+					br
+					span(style="text-align: left; color: #d3d3d3; font: 12px Arial, sans-serif; line-height: 15px;") Your Apple Certifyed Support professional
+				+social("https://i.imgur.com/yMIK47z.jpg", "Facebook")
+				+social("https://i.imgur.com/ufvV3Qr.jpg", "Twitter")
+				+social("https://i.imgur.com/Omeafat.jpg", "Google+")
+				+social("https://i.imgur.com/JVCf36N.jpg", "YouTube")
+
+mixin representative(imgSrc, country, tel)
+	td
+		img(src=imgSrc, onerror="this.style.display='none'", alt="" border="0" width="25" style="display:block;")
+	td(style="text-align: left")
+		span(style="color: #d3d3d3; font: 14px Arial, sans-serif; line-height: 15px; -webkit-text-size-adjust:none;")=country
+		| #{tel}
+
+mixin worldWide()
+	table(width="100%", cellspacing="0", cellpadding="0", border="0", style="margin: 0 0 0 15px; padding: 20px 0;")
+		tbody
+			tr
+				+representative("https://i.imgur.com/5OJwfNw.jpg", "USA: ", "1(888)572-5876")
+				+representative("https://i.imgur.com/uf9Q3n3.jpg", "AU: ", "1(800)462-715")
+				+representative("https://i.imgur.com/hK2tfWI.jpg", "UK: ", "0(808)189-1280")
+
+mixin support()
+	table(width="100%", cellspacing="0", cellpadding="0", border="0", style="padding: 0 15px; margin: 0; color: #d3d3d3; font: 10px Arial, sans-serif; text-align: left; line-height: 12px;")
+		tbody
+			tr
+				td(style="display:block") This email was sent to 
+					a(href="#" style="color: #000") littleuliss@gmail.com.
+				td(style="display:block") Please add notification@mackeeper.com to your address book to ensure that our emails reach your inbox.
+				td(style="display:block") If you'd prefer not to receive any news from us, here is the 
+					span(style="color: #000; font: 10px Arial, sans-serif; line-height: 12px;") 
+						a(href="#" style="color: #000; font: 10px Arial, sans-serif; line-height: 12px;") link 
+					|to unsubscribe.
+				td(style="display:block") To change your communication preferences, use this  
+					a(href="#" style="color: #000; font: 10px Arial, sans-serif; line-height: 12px;") link.
+				td(style="display:block") Kromtech Alliance Corp, Richmondstrasse 6, 50667 Cologne, Germany.
+				td(style="display:block; padding: 10px 0")
+					a(href="#" style="text-decoration: underline; color: #d3d3d3; font: 10px Arial, sans-serif; line-height: 12px;") Privacy Policy
+mixin clever(imgSrc, alt, fontSize)
+	td(align="center" style="color: #000; font: " + fontSize + " Arial, sans-serif; font-weight: bold; line-height: 50px; -webkit-text-size-adjust:none;") 
+		img(src=imgSrc, alt=alt, border="0" width="400" style="display: block;")

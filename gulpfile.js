@@ -5,10 +5,10 @@ var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var sass = require('gulp-sass');
-var trSass = require('jstransformer')(require('jstransformer-sass'));
-// var stylus = require('jstransformer')(require('jstransformer-stylus'))
+var sassTr = require('jstransformer')(require('jstransformer-sass'));
+var stylusTr = require('jstransformer')(require('jstransformer-stylus'))
  
-trSass.render('h1\n  color: red').body
+// sassTr.render('h1\n  color: red').body
 
 // var css = "fonts = helvetica, arial, sans-serif\
 // body {\
@@ -21,25 +21,10 @@ var processors = [
 	autoprefixer({browsers: ['last 2 version']})
 ];
 
- 
-
-const ignorePug = [
-	'!src/layouts/**',
-	'!src/blocks/**',
-	'!src/globals/**'
-];
-
 gulp.task('html', function(){
-	return gulp.src(['src/**/*.pug', ...ignorePug])
+	return gulp.src('src/**/*.pug')
 		.pipe(pug())
 		.pipe(gulp.dest('build'))
-});
-
-
-gulp.task('js', function(){
-	return gulp.src('src/assets/*.js')
-		.pipe(gulp.dest('build/assets'))
-		.pipe(browserSync.stream());
 });
 
 gulp.task('sass', function () {
@@ -66,7 +51,6 @@ var reload = function(done){
 gulp.task('watch', function() {
 	gulp.watch('src/**/*.pug', gulp.series('html', reload));
 	gulp.watch('src/**/*.sass', gulp.series('sass'));
-	gulp.watch('src/**/*.js', gulp.series('js', reload));
 });
 
 gulp.task('copy', function(){
@@ -80,13 +64,7 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'js', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'copy'));
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
-
-
-
-
-
-

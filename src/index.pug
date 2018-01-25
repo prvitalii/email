@@ -1,4 +1,83 @@
-extends layouts/main
+include ./mixins
+doctype strict
 
-block content
-	
+html(xmlns="http://www.w3.org/1999/xhtml")
+	head
+		meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+		meta(content="initial-scale=1.0", name="viewport")
+		title Go purple
+	body(style="font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; width: 100%; text-align: center; background-color: #e5e5e5")
+		//- container
+		table(width="100%", cellspacing="0", cellpadding="0", border="0" style="margin:0; padding:0;")
+			tbody
+				tr
+					td
+						//- main table container
+						table(width="600", cellspacing="0", cellpadding="0", border="0", style="margin: auto; padding:0;")
+							tbody
+								//- above content
+								tr 
+									td
+										table(width="100%", cellspacing="0", cellpadding="0", border="0", style="padding: 10px 0; margin: 0;")
+											tbody
+												tr
+													td(align="left" style="color: #000; font: 14px Arial, sans-serif; line-height: 30px; -webkit-text-size-adjust:none; display: block;") Green Light for 60% MacKepper Sale
+													td(align="right")
+														a(href="#" style="color: #000; font: 14px Arial, sans-serif; line-height: 30px; text-decoration: none; -webkit-text-size-adjust:none; display: block;" target="_blank") Open in browser
+								//- base content
+								//- header
+								tr
+									td
+										table(width="100%", cellspacing="0", cellpadding="0", border="0", bgcolor="#fff", style="padding: 5px 20px; margin: 0")
+											tbody
+												tr
+													td(width="10")
+														img(src="https://i.imgur.com/FqE2ZW4.jpg", onerror="this.style.display='none'" alt="Human inside" border="0" width="40" style="display: block;")
+													td(style="padding: 5px 0 0 0; text-align: left; color: #000; font: 16px Arial, sans-serif; font-weight: bold; line-height: 12px; -webkit-text-size-adjust:none;") MACKEEPER
+														br
+														span(style="color: #d3d3d3; font: 10px Arial, sans-serif; line-height: 10px; -webkit-text-size-adjust:none;") Human inside
+								//- main
+								tr
+									td
+										table(width="100%", cellspacing="0", cellpadding="0", border="0", bgcolor="#d9eda5" style="margin:0; padding:0;")
+											tbody
+												tr
+													td(style="padding: 20px 0; color: #000; font: 24px Arial, sans-serif; line-height: 20px; -webkit-text-size-adjust:none;") This St.Patrick's Day 
+												tr
+													+clever("https://i.imgur.com/Fw3docd.jpg", "LUCKY YOU", "50px")
+												tr
+													+clever("https://i.imgur.com/qBzH914.jpg", "1/2 OFF", "50px")
+												tr
+													+clever("https://i.imgur.com/yocPh8k.jpg", "the entire store", "20px") 
+												tr
+													td(align="center" style="padding: 20px 0 0 0") 
+														a(href="#" width="300" style="position: relative; color: #fff; background: #f47a42; font: 20px Arial, sans-serif; line-height: 50px; -webkit-text-size-adjust:none; max-width: 300px; border-radius: 10px; text-decoration: none; display: block;" target="_blank") 
+															span(style="content: ''; position: absolute; border-color: #fff; border-style: solid; border-width: 0 0.1em 0.2em 0; height: 0.8em; top: 1.5em; left: 2em; margin-top: -1em; transform: rotate(45deg); width: 0.5em;") 
+															|I'm Feeling Lucky
+												tr
+													td(align="center" style="padding: 10px 0 0 0; color: #000; font: 14px Arial, sans-serif; line-height: 20px; text-decoration: underline; -webkit-text-size-adjust:none;")
+														| Keep your Mac clean with MacKeeper Premium
+														br
+														| #{"&"} save up for green beer
+												tr
+													td(align="center" style="padding: 30px 0 0 0; color: #000; font: 24px Arial, sans-serif; font-weight: bold; line-height: 25px; -webkit-text-size-adjust:none;")
+														| MacKeeper - Go Green and 
+														br
+														| Keep Your Mac Clean!
+												tr
+													td(align="center" style="padding: 30px 0 0 0")
+														img(src="https://i.imgur.com/nSiMTSs.jpg" onerror="this.style.display='none'" alt="LAPTOP" border="0" width="400" style="display:block;")
+												//- footer
+												tr
+													td
+														table(cellspacing="0", cellpadding="0", border="0", align="center", bgcolor="#fff" style="display: block; margin: 5px; padding: 10px 5px;")
+															tbody
+																tr
+																	td
+																		+founder()
+																tr 
+																	td
+																		+worldWide()
+																tr
+																	td
+																		+support()
